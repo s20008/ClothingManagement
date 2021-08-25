@@ -1,19 +1,20 @@
 package jp.ac.it_college.s20008.android.clothingmanagement
 
 import android.graphics.Color
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import jp.ac.it_college.s20008.android.clothingmanagement.databinding.ActivityLuckycolorBinding
+import androidx.annotation.RequiresApi
+import jp.ac.it_college.s20008.android.clothingmanagement.databinding.ActivityLuckyColorBinding
 
-
-class Luckycolor : AppCompatActivity() {
+class LuckyColor : AppCompatActivity() {
     //bindingの設定
-    private lateinit var binding: ActivityLuckycolorBinding
+    private lateinit var binding: ActivityLuckyColorBinding
 
-
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityLuckycolorBinding.inflate(layoutInflater)
+        binding = ActivityLuckyColorBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
 

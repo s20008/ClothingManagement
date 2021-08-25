@@ -3,7 +3,6 @@ package jp.ac.it_college.s20008.android.clothingmanagement
 import android.content.Intent
 import android.os.Bundle
 import android.provider.MediaStore
-import android.widget.Button
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
@@ -45,7 +44,9 @@ class MainActivity : AppCompatActivity() {
             preview()
         }
 
-        binding.fuButton.setOnClickListener { onLuckycolorTap(it as Button?) }
+        binding.fuButton.setOnClickListener { view ->
+            onLuckycolorTap()
+        }
 
         val layoutManager = GridLayoutManager(this, 2)
         binding.recyclerView.layoutManager = layoutManager
@@ -54,8 +55,8 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    private fun onLuckycolorTap(button:Button?) {
-        val intent = Intent(this,Luckycolor::class.java)
+    private fun onLuckycolorTap() {
+        val intent = Intent(this,LuckyColor::class.java)
         startActivity(intent)
     }
 

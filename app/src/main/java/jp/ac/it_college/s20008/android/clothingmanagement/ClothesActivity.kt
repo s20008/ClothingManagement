@@ -1,8 +1,8 @@
 package jp.ac.it_college.s20008.android.clothingmanagement
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
-import android.view.View
 
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.navArgs
@@ -38,8 +38,8 @@ class ClothesActivity:AppCompatActivity() {
             binding.placeText.setText(clothes?.place)
         }
         binding.saveButton.setOnClickListener { onSaveTapped() }
-    }
 
+    }
 
     private fun onSaveTapped() {
         when(args.clothesId){
